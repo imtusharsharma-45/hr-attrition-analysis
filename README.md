@@ -1,98 +1,104 @@
-# HR Employee Attrition — EDA & Statistical Hypothesis Testing
+# HR Employee Attrition Analysis | EDA & Statistical Hypothesis Testing
 
-## Project Overview
+## 📌 Project Overview
 
-This project analyzes employee attrition using **Python, exploratory data analysis (EDA), and statistical hypothesis testing**.
+This project presents an end-to-end employee attrition analysis using **Python, Exploratory Data Analysis (EDA), and statistical hypothesis testing**.
 
-The objective is not only to identify patterns in employee turnover, but also to test whether observed relationships between workforce characteristics and attrition are statistically significant.
+The project combines data exploration with statistical validation to determine whether observed workforce patterns are statistically significant. The analysis covers **1,470 employees across 35 workforce attributes**, focusing on factors such as overtime, monthly income, department, job role, and job satisfaction.
 
-The analysis covers **1,470 employees across 35 attributes** and evaluates factors including overtime, monthly income, department, and job satisfaction.
+The findings are supported by **Chi-Square Tests of Independence** and **Welch's Independent Samples t-tests**, enabling evidence-based business recommendations rather than relying solely on visual observations.
 
 ---
 
-## Business Problem
+# 🎯 Business Problem
 
 Employee attrition can increase recruitment costs, disrupt teams, and reduce organizational productivity.
 
 Management wants to understand which workforce characteristics are associated with employee attrition and whether these relationships are statistically significant rather than simply visible patterns in the data.
 
-### Key Questions
+### Business Questions
 
 - Is overtime associated with employee attrition?
 - Do employees who leave have different income levels?
 - Is attrition associated with department?
 - Do employees who leave report different job satisfaction levels?
-- Which employee groups may require greater retention attention?
+- Which employee groups require greater retention attention?
 
 ---
 
-## Tools & Technologies
+# 🛠️ Tools & Technologies
 
 | Technology | Purpose |
-|---|---|
-| Python | Data analysis |
-| Pandas | Data manipulation |
-| NumPy | Numerical analysis |
-| Matplotlib | Data visualization |
-| Seaborn | Exploratory visualization |
-| SciPy | Statistical hypothesis testing |
-| Jupyter Notebook | Analysis workflow |
+|------------|---------|
+| Python | Data Analysis |
+| Pandas | Data Manipulation |
+| NumPy | Numerical Operations |
+| Matplotlib | Data Visualization |
+| Seaborn | Exploratory Data Analysis |
+| SciPy | Statistical Hypothesis Testing |
+| Jupyter Notebook | Analysis Workflow |
+| Git & GitHub | Version Control & Documentation |
 
 ---
 
-## Dataset Information
+# 📂 Dataset Information
 
-The project uses an IBM HR Analytics Employee Attrition dataset containing employee demographic, compensation, job, satisfaction, and employment-history information.
+The project uses the **IBM HR Analytics Employee Attrition** dataset containing employee demographic, compensation, job, satisfaction, and employment-history information.
 
 ### Dataset Summary
 
 | Metric | Value |
-|---|---:|
-| Employees | 1,470 |
-| Features | 35 |
+|---------|-------:|
+| Total Employees | 1,470 |
+| Total Features | 35 |
 | Attrited Employees | 237 |
 | Retained Employees | 1,233 |
 | Overall Attrition Rate | 16.12% |
 | Missing Values | 0 |
-| Exact Duplicate Rows | 0 |
+| Duplicate Records | 0 |
 
 ---
 
-## Analysis Workflow
+# 🔄 Analysis Workflow
 
-The project follows a structured analytical workflow:
+The project follows a structured analytics workflow:
 
-1. Data loading and inspection
-2. Data quality validation
-3. Univariate analysis
-4. Bivariate attrition analysis
-5. Exploratory data visualization
-6. Statistical hypothesis testing
-7. Interpretation of results
-8. Business recommendations
-
----
-
-## Exploratory Data Analysis
-
-EDA was performed to understand workforce patterns related to:
-
-- Employee attrition
-- Overtime
-- Monthly income
-- Department
-- Job role
-- Job satisfaction
-- Employee demographics
-- Workforce tenure and experience
-
-Correlation analysis was also used to explore relationships among numerical employee characteristics.
+1. Data Loading & Inspection
+2. Data Quality Validation
+3. Univariate Analysis
+4. Bivariate Analysis
+5. Exploratory Data Visualization
+6. Correlation Analysis
+7. Statistical Hypothesis Testing
+8. Interpretation of Results
+9. Business Recommendations
 
 ---
 
-# Statistical Hypothesis Testing
+# 📊 Exploratory Data Analysis
+
+EDA was performed to understand workforce patterns related to employee attrition.
+
+The analysis includes:
+
+- Employee Attrition Distribution
+- Monthly Income Distribution
+- Age Distribution
+- Overtime vs Attrition
+- Department vs Attrition
+- Job Role vs Attrition
+- Job Satisfaction Analysis
+- Correlation Heatmap
+
+Correlation analysis was performed to examine relationships among numerical employee characteristics before conducting statistical hypothesis testing.
+
+---
+
+# 📈 Statistical Hypothesis Testing
 
 A significance level of **α = 0.05** was used for hypothesis testing.
+
+---
 
 ## 1. Overtime vs Attrition
 
@@ -102,9 +108,9 @@ A significance level of **α = 0.05** was used for hypothesis testing.
 
 **H₁:** Overtime and attrition are associated.
 
-### Test
+### Statistical Test
 
-Chi-Square Test of Independence
+**Chi-Square Test of Independence**
 
 ### Result
 
@@ -113,14 +119,14 @@ Chi-Square Test of Independence
 
 ### Decision
 
-Reject H₀.
+Reject **H₀**.
 
 There is a statistically significant association between overtime and employee attrition.
 
 ### Observed Attrition Rates
 
 | Overtime | Attrition Rate |
-|---|---:|
+|----------|---------------:|
 | Yes | 30.53% |
 | No | 10.44% |
 
@@ -136,9 +142,9 @@ Employees working overtime show approximately three times the observed attrition
 
 **H₁:** Mean monthly income differs between the two groups.
 
-### Test
+### Statistical Test
 
-Welch's Independent Samples t-test
+**Welch's Independent Samples t-test**
 
 ### Result
 
@@ -147,14 +153,14 @@ Welch's Independent Samples t-test
 
 ### Decision
 
-Reject H₀.
+Reject **H₀**.
 
 Monthly income differs significantly between employees who left and employees who remained.
 
 ### Income Comparison
 
 | Employee Group | Average Monthly Income | Median Monthly Income |
-|---|---:|---:|
+|---------------|-----------------------:|----------------------:|
 | Attrited | 4,787 | 3,202 |
 | Retained | 6,833 | 5,204 |
 
@@ -170,9 +176,9 @@ Employees who left had substantially lower income in this dataset.
 
 **H₁:** Department and attrition are associated.
 
-### Test
+### Statistical Test
 
-Chi-Square Test of Independence
+**Chi-Square Test of Independence**
 
 ### Result
 
@@ -181,19 +187,19 @@ Chi-Square Test of Independence
 
 ### Decision
 
-Reject H₀.
+Reject **H₀**.
 
 Department and employee attrition are statistically associated.
 
 ### Department Attrition Rates
 
 | Department | Attrited | Total Employees | Attrition Rate |
-|---|---:|---:|---:|
+|------------|---------:|----------------:|---------------:|
 | Sales | 92 | 446 | 20.63% |
 | Human Resources | 12 | 63 | 19.05% |
 | Research & Development | 133 | 961 | 13.84% |
 
-Research & Development has the largest **number** of attritions because it is the largest department, while **Sales has the highest attrition rate**.
+Although Research & Development records the highest number of attritions, **Sales has the highest attrition rate**.
 
 ---
 
@@ -205,9 +211,9 @@ Research & Development has the largest **number** of attritions because it is th
 
 **H₁:** Mean job satisfaction differs between the two groups.
 
-### Test
+### Statistical Test
 
-Welch's Independent Samples t-test
+**Welch's Independent Samples t-test**
 
 ### Result
 
@@ -216,14 +222,14 @@ Welch's Independent Samples t-test
 
 ### Decision
 
-Reject H₀.
+Reject **H₀**.
 
-Mean job satisfaction differs significantly between employees who left and those who remained.
+Average job satisfaction differs significantly between employees who left and those who remained.
 
 ### Satisfaction Comparison
 
 | Employee Group | Average Job Satisfaction |
-|---|---:|
+|---------------|-------------------------:|
 | Attrited | 2.47 |
 | Retained | 2.78 |
 
@@ -231,89 +237,90 @@ Employees who left reported lower average job satisfaction.
 
 ---
 
-## Statistical Results Summary
+# 📋 Statistical Results Summary
 
 | Business Question | Statistical Test | Result | Significant? |
-|---|---|---|---|
-| Overtime vs Attrition | Chi-Square | χ²=87.56, p<0.001 | Yes |
-| Monthly Income vs Attrition | Welch's t-test | t=-7.48, p<0.001 | Yes |
-| Department vs Attrition | Chi-Square | χ²=10.80, p=0.0045 | Yes |
-| Job Satisfaction vs Attrition | Welch's t-test | t=-3.93, p≈0.0001 | Yes |
+|-------------------|------------------|--------|--------------|
+| Overtime vs Attrition | Chi-Square Test | χ² = 87.56, p < 0.001 | ✅ Yes |
+| Monthly Income vs Attrition | Welch's t-test | t = -7.48, p < 0.001 | ✅ Yes |
+| Department vs Attrition | Chi-Square Test | χ² = 10.80, p = 0.0045 | ✅ Yes |
+| Job Satisfaction vs Attrition | Welch's t-test | t = -3.93, p ≈ 0.0001 | ✅ Yes |
 
-All four tested relationships show statistically significant differences or associations at **α = 0.05**.
-
----
-
-## Key Business Insights
-
-### 1. Overtime is strongly associated with attrition
-
-Employees working overtime have an observed attrition rate of approximately **30.5%**, compared with approximately **10.4%** among employees without overtime.
-
-Overtime should therefore be investigated as an important retention indicator.
-
-### 2. Attrited employees have lower income
-
-Employees who left had a median monthly income of **3,202**, compared with **5,204** among retained employees.
-
-Compensation differences should be investigated together with job level, experience, role, and tenure.
-
-### 3. Sales has the highest departmental attrition rate
-
-Although Research & Development has the largest raw number of attritions, **Sales has the highest attrition rate at approximately 20.6%**.
-
-This demonstrates why normalized rates are more useful than raw counts when comparing differently sized departments.
-
-### 4. Job satisfaction differs between groups
-
-Employees who left reported lower average job satisfaction than employees who remained.
-
-Employee satisfaction can therefore be considered alongside other workforce indicators when evaluating retention risk.
+These statistical findings provide quantitative evidence supporting the patterns observed during exploratory data analysis.
 
 ---
 
-## Business Recommendations
+# 💡 Key Findings
 
-1. **Review overtime-heavy roles**  
-   Identify teams with persistent overtime and evaluate staffing, workload distribution, scheduling, and employee recovery time.
+### Overtime
 
-2. **Review compensation competitiveness**  
-   Investigate compensation for employee groups showing higher attrition, while controlling for job level, experience, and role.
+Employees working overtime exhibit significantly higher attrition than employees who do not work overtime.
 
-3. **Prioritize Sales retention analysis**  
-   Sales has the highest departmental attrition rate and may benefit from deeper analysis of workload, incentives, management practices, and career progression.
+### Monthly Income
 
-4. **Monitor employee satisfaction**  
-   Regular engagement or pulse surveys may help identify declining satisfaction before employees leave.
+Employees who left the organization have considerably lower average and median monthly income.
 
-5. **Use multiple indicators together**  
-   Attrition should not be attributed to one variable alone. Overtime, compensation, department, satisfaction, tenure, role, and career progression should be considered together.
+### Department
+
+Sales records the highest attrition rate, while Research & Development records the largest number of attritions due to its larger workforce.
+
+### Job Satisfaction
+
+Employees who left the organization report lower average job satisfaction than retained employees.
 
 ---
 
-## Important Statistical Note
+# 📋 Business Recommendations
+
+1. **Review overtime-heavy roles** to improve work-life balance and reduce burnout.
+
+2. **Evaluate compensation competitiveness** for employee groups experiencing higher attrition.
+
+3. **Prioritize retention strategies within the Sales department**, where the attrition rate is highest.
+
+4. **Monitor employee satisfaction regularly** through engagement surveys and feedback programs.
+
+5. **Consider multiple workforce indicators together**, including overtime, income, department, job satisfaction, tenure, and job role when developing retention strategies.
+
+---
+
+# 📖 Important Statistical Note
 
 Statistical significance indicates that the observed relationships are unlikely to be explained by random sampling variation under the null hypothesis.
 
-However, these tests demonstrate **association or group differences — not causation**.
+However, these analyses demonstrate **association or group differences—not causation**.
 
-For example, the analysis supports an association between overtime and attrition, but it does not prove that overtime directly causes employees to leave.
+For example, the results support a statistically significant association between overtime and employee attrition, but they do not prove that overtime directly causes employees to leave.
 
 ---
 
-## Project Structure
+# ⭐ Project Features
+
+- End-to-End Exploratory Data Analysis (EDA)
+- Statistical Hypothesis Testing
+- Chi-Square Test of Independence
+- Welch's Independent Samples t-test
+- Correlation Analysis
+- Business Interpretation of Statistical Results
+- Workforce Analytics
+- Employee Attrition Analysis
+- Data-Driven Business Recommendations
+
+---
+
+# 📁 Project Structure
 
 ```text
-hr-attrition-analysis/
+HR-Employee-Attrition-Analysis/
 │
-├── data/
+├── Data/
 │   └── HR_Attrition.csv
 │
-├── notebooks/
+├── Notebooks/
 │   └── eda_analysis.ipynb
 │
-├── outputs/
-│   └── charts/
+├── Reports/
+│   └── Visualizations/
 │
 ├── requirements.txt
 │
@@ -322,42 +329,43 @@ hr-attrition-analysis/
 
 ---
 
-## How to Reproduce
+# ▶️ How to Run the Project
 
-1. Clone or download this repository.
-2. Install dependencies from `requirements.txt`.
-3. Open `notebooks/eda_analysis.ipynb`.
-4. Load the HR Attrition dataset.
+1. Clone this repository.
+2. Install the required Python libraries from `requirements.txt`.
+3. Open `eda_analysis.ipynb` in Jupyter Notebook.
+4. Load the dataset from the `Data` folder.
 5. Run the notebook cells sequentially.
 6. Review the EDA visualizations.
-7. Review the statistical hypothesis tests and interpretations.
+7. Interpret the statistical hypothesis testing results and business recommendations.
 
 ---
 
-## Skills Demonstrated
+# 💼 Skills Demonstrated
 
-This project demonstrates practical experience with:
-
-- Exploratory Data Analysis
+- Data Cleaning & Validation
+- Exploratory Data Analysis (EDA)
 - Statistical Hypothesis Testing
 - Chi-Square Test of Independence
 - Welch's Independent Samples t-test
-- Statistical significance and p-values
-- Workforce analytics
-- Attrition analysis
+- Correlation Analysis
+- Statistical Interpretation
+- Workforce Analytics
+- Employee Attrition Analysis
 - Pandas
+- NumPy
 - SciPy
 - Matplotlib
 - Seaborn
-- Business insight generation
-- Translating statistical evidence into recommendations
+- Business Insight Generation
+- Data-Driven Decision Making
 
 ---
 
-## Author
+# 👨‍💻 Author
 
 **Tushar Sharma**
 
-Data Analyst | SQL | Python | Power BI | Tableau | Statistics | AWS | Snowflake
+**Aspiring Data Analyst**
 
-GitHub: `imtusharsharma-45`
+**GitHub:** `imtusharsharma-45`
