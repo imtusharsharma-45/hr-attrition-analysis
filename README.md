@@ -366,6 +366,4 @@ HR-Employee-Attrition-Analysis/
 
 **Tushar Sharma**
 
-**Aspiring Data Analyst**
-
 **GitHub:** `imtusharsharma-45`
